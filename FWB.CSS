@@ -1,0 +1,150 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.movie-container {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  height: 90vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.video-background {
+  flex: 1.5;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.video-background:hover video {
+  opacity: 0.9;
+}
+
+.movie-info {
+  flex: 1;
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 5% 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.movie-info:hover {
+  background-color: rgba(18, 18, 18, 0.95);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.metadata {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.primary-button {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+ 
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 87, 51, 0.3);
+}
+
+.secondary-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .movie-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .video-background, .movie-info {
+    flex: none;
+  }
+
+  .video-background {
+    height: 40vh;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-container {
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+}

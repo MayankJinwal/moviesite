@@ -1,0 +1,418 @@
+body {
+    background-color: #000814;
+    background-size: cover; /* Ensures the background covers the entire area */
+    background-position: center; /* Centers the background image */
+    color: white; /* White text for contrast against a dark background */
+ 
+    }
+
+body .box{
+    background-color: black;
+  top: 0;
+  position: absolute;
+  opacity: 25;
+   
+}
+.movie {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    align-items: center;
+}
+
+#movie-section {
+    text-align: center;
+    margin-top: 50px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+body {
+    background-color: #000814;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* ... (other existing styles remain unchanged) ... */
+
+/* Updated Logo Styles */
+#logo {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#logo img {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+#logo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+#logo:hover::before {
+    left: 100%;
+    top: 100%;
+}
+
+#logo:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Updated Search Bar and Genre Selector Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 8, 20, 0.8), rgba(0, 8, 20, 0.6));
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+#search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 300px;
+}
+
+#search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search-bar button {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-bar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 65, 108, 0.3);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+#genreSelect {
+    appearance: none;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: white;
+    padding: 12px 40px 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+
+#genreSelect:hover {
+      transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 65, 108, 0.3);
+}
+
+.select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: white;
+    font-size: 12px;
+}
+select {
+    appearance: none;
+    background-color: rgba(18, 18, 18, 0.9);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 40px 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover, select:focus {
+    background-color: rgba(40, 40, 40, 0.9);
+    border-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+/* Custom dropdown arrow */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #ff5733;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+/* Style for dropdown options */
+select option {
+    background-color: #000814;
+    color: #fff;
+    padding: 12px;
+}
+
+
+/* Movie section */
+#movie-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.movie {
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 10px;
+}
+.movie:hover {
+    transform: scale(1.09);
+    box-shadow: 0 8px 15px rgba(173, 216, 230, 0.5); /* Light blue shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(255, 255, 255, 0.6); /* Frosty white overlay */
+    border: 1px solid rgba(173, 216, 230, 0.4); /* Light blue snow-like border */
+    filter: brightness(0.9) saturate(1.2) blur(0.5px); /* Frosted effect */
+    cursor: pointer;
+  }
+  
+  #a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #r, #p, #q {
+   background-repeat: no-repeat;
+    background-size: max(230px, 16vw);
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 220px;
+    height: 300px;
+    align-items: center;
+  }
+#a{
+    background-image: url('img/lod.jpg');
+}
+
+#b{
+    background-image: url('img/The_Founder_poster.png');
+}
+#c{
+    background-image: url('img/The_Nice_Guys_poster.png');
+} 
+#d{
+    background-image: url('img/The_Social_Network_film_poster.png');
+}
+#e{
+    background-image: url('img/Palm_Springs_poster.jpeg');
+}
+#f{
+    background-image: url('img/Hit_man_2024_film.jpg');
+}
+#g{
+    background-image: url('img/Vacation_Friends.jpg');
+
+}
+#h{
+    background-image: url('img/CrazyStupidLovePoster.jpg');
+  
+}
+#i{
+    background-image: url('img/Friends_with_benefits_poster.jpg');
+   
+}
+#j{
+    background-image: url('img/Ghosts_of_girlfriends_past.jpg');
+    
+}
+#k{
+    background-image: url('img/The_Fall_Guy_\(2024\)_poster.jpg');
+   
+}
+#l{
+    background-image: url('img/Five_hundred_days_of_summer.jpg');
+  
+}
+#m{
+    background-image: url('img/50_50_Poster.jpg');
+   
+}
+#n{
+    background-image: url('img/Don_Jon_Poster.jpg');
+   
+}
+
+#p{
+    background-image: url('img/Kungfupanda.jpg');
+}
+
+#q{   background-image: url('img/Kung_Fu_Panda_2_Poster.jpg');
+}
+
+ #r{   background-image: url('img/Deadpool_\(2016_poster\).png');
+}
+
+@media (max-width: 480px) {
+    #movie-section {
+        grid-template-columns: 1fr; /* 1 movie per row on mobile */
+    }
+
+    .movie {
+        width: 180px;
+        height: 270px; /* Adjusted size for mobile */
+    }
+
+    #search-bar input {
+        padding: 10px 50px;
+    }
+
+    #search-bar button, #genre {
+        padding: 10px;
+    }
+
+    #logo img {
+        width: 100px;
+        height: 50px;
+    }
+}
+#brand-section {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .brand {
+    width: 250px;
+    height: 200px;
+  }
+  
+  .brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .brand {
+    width: 250px;
+    height: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .brand:hover {
+    transform: scale(1.1); /* Slight zoom */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adding shadow */
+  }
+  .movie-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+.search-icon {
+    color: #888;
+    margin-right: 10px;
+}
+input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+.search-button {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 65, 108, 0.3);
+}
+.genre-dropdown {
+    position: relative;
+    margin-left: 10px;
+}
+.genre-button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.genre-icon {
+    margin-right: 5px;
+}

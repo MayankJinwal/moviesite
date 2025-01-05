@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Friends with Benefits</title>
+    <link rel="stylesheet" href="movieplayer.css"> 
+</head>
+<body>
+  <div class="video-container">
+    <video id="myVideo">
+        <source src="Movies/500 Days of Summer 2009 1080p 10Bit BluRay English ESubs  MoviesMod.Info.mkv" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="controls">
+        <button id="backwardBtn"><img src="img/backward.svg" alt="Backward"></button>
+        <button id="playPauseBtn"><img src="img/play.svg" alt="Play"></button>
+        <button id="forwardBtn"><img src="img/forward.svg" alt="Forward"></button>
+        <input type="range" id="seekBar" value="0">
+        <input type="range" id="volumeBar" min="0" max="1" step="0.1" value="1">
+        <button id="fullscreenBtn"><img src="img/full.svg" alt="Fullscreen"></button>
+    </div>
+</div>
+
+
+    <script src="movieplayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Springs-oraninters</title>
+    <link rel="stylesheet" href="FWB.CSS">
+</head>
+<body>
+    <div class="movie-container">
+        <div class="video-background">
+            <video src="trailers/Palm Springs - Trailer (Official) _ Hulu.mp4" autoplay loop muted>
+            </video>
+            
+        </div>
+        <div class="movie-info">
+            <h1>Palm Springs</h1>
+            <div class="metadata">
+                2020 | Maturity Rating:A | 1h 30m | Comedy
+            </div>
+            <p>Wedding guests Nyles and Sarah meet-cute in the desert and find themselves facing unexpected feelings — and the same day over and over again.</p>
+            <button onclick="playMovie()" class="button primary-button">Watch with Oraninters</button>
+            <button class="button secondary-button">Like</button>
+            <button class="button secondary-button">Language</button>
+            <button class="button secondary-button">Add to Watchlist</button>
+        </div>
+    </div>
+    <script>
+        function playMovie() {
+            window.location.href = "PlayPS.html"; // Redirects to movie player page
+        }
+    </script>
+</body>
+</html>
